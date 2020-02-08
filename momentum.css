@@ -1,0 +1,13 @@
+body {
+    background-color: #eee;
+    color: #222;
+}
+
+.form, 
+.greeting {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
