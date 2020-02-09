@@ -6,21 +6,25 @@
         <link rel="stylesheet" href="momentum.css" />
     </head>
     <body>
-        <div class="js-clock">
-            <h1>00:00:00</h1>
+        <div class="section">
+            <div class="js-clock clock"><h1>00:00:00</h1></div>
         </div>
-        <form action="" class="js-form form">
-            <input type="text" placeholder="what is your name?" />
-        </form>
-        <h4 class="js-greeting greeting"></h4>
-        <form class="js-toDoForm">
-            <input type="text" placeholder="write a to do"/>
-        </form>
-        <ul class="js-toDoList">
-
-        </ul>
+        <div class="section">
+            <form action="" class="js-form form">
+                <input type="text" placeholder="what is your name?" />
+            </form>
+            <h4 class="js-greeting greeting"></h4>
+        </div>
+        <div class="section">
+            <form class="js-toDoForm toDoForm">
+                <input type="text" placeholder="write a to do"/>
+            </form>
+        </div>
+        <div class="section">
+            <ul class="js-toDoList toDoList"></ul>
+        </div>
         <!-- 만들고자 하는 것의 하위 요소 별로 파일 생성. divide & conquer -->
-        <span class="js-weather"></span>
+        <span class="js-weather weather"></span>
         <script src="clock.js"></script>
         <script src="greeting.js"></script>
         <script src="todo.js"></script>

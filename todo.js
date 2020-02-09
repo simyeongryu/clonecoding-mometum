@@ -50,7 +50,8 @@ function paintToDo(text) {
     // HTML 요소 생성
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
-    delBtn.innerText = "❌"; // 이모지를 사용하려면 HTML에 <meta charset="utf-8" /> 추가 
+    delBtn.innerText = "❌"; // 이모지를 사용하려면 HTML에 <meta charset="utf-8" /> 추가
+    delBtn.classList.add("btnBg"); 
     delBtn.addEventListener("click", deleteToDo);
     const span = document.createElement("span");
     // 배열이 비었을 때의 id는 1

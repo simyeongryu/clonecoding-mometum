@@ -1,11 +1,20 @@
 body {
     background-color: #eee;
-    color: #ffffff;
+    color: white;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .form, 
 .greeting {
     display: none;
+    width: 300px;
+    margin: auto;
+    text-align: center;
 }
 
 .showing {
@@ -29,4 +38,41 @@ body {
     height: 100%;
     z-index: -1;
     animation: fadeIn 0.5s linear;
+}
+
+.weather {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+.section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.clock {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.toDoForm, .toDoList {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+} 
+
+/* 버튼 배경색, 경계선 색 투명화 */
+.btnBg {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.section form input {
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 2px solid white;
+    color: white 
 }
