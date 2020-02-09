@@ -5,7 +5,35 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 const TODO_LS = "toDo";
 
 // 할 일들이 저장될 배열 
-const toDos = [];
+let toDos = [];
+
+function filterFn(toDo) {
+    return toDo.id === 1;
+}
+
+function deleteToDo(event) {
+    // 부모 요소 찾기.
+    // console.dir(event.target);
+    // 이벤트가 발생한 버튼
+    const btn = event.target;
+    // 해당 버튼의 부모요소
+    const li = btn.parentNode;
+    // 그 부모요소를 지운다.
+    toDoList.removeChild(li);
+
+    /** filter()
+     * 객체 내에서 () 안의 조건에 맞는 요소들만 추려서 배열로 리턴.
+     * 객체 내의 모든 요소에 함수를 실행시킨다.
+     */
+    const cleanToDos = toDos.filter(function (toDo) {
+        // console.log(toDo.id, li.id);
+        // li.id 는 string, toDo.id는 number 이기ㄷ 때문에 그냥 하면 적용이 되지 않는다.
+        return toDo.id !== parseInt(li.id);
+    });
+    // 이런 재할당은 toDos가 let으로 선언되어야 가능하다.
+    toDos = cleantoDos;
+    saveToDos();
+}
 
 function saveToDos() {
     /**
@@ -23,6 +51,7 @@ function paintToDo(text) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     delBtn.innerText = "❌"; // 이모지를 사용하려면 HTML에 <meta charset="utf-8" /> 추가 
+    delBtn.addEventListener("click", deleteToDo);
     const span = document.createElement("span");
     // 배열이 비었을 때의 id는 1
     const newId = toDos.length + 1;
