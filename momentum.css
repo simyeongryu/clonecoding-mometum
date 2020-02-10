@@ -1,3 +1,4 @@
+/* 기본 초기화 */
 body {
     background-color: #eee;
     color: white;
@@ -9,6 +10,8 @@ ul, li {
     margin: 0;
 }
 
+
+/*  */
 .form, 
 .greeting {
     display: none;
@@ -52,10 +55,18 @@ ul, li {
     margin-bottom: 20px;
 }
 
+
+/* 시계 부분 크기 조정 */
 .clock {
-    width: 300px;
+    width: 600px;
     margin: auto;
     text-align: center;
+    font-size: 80px;
+}
+
+.clock h1 {
+    width: 100%;
+    margin: auto;
 }
 
 .toDoForm, .toDoList {
