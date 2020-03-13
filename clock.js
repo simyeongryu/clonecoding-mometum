@@ -1,8 +1,6 @@
 const clockContainer = document.querySelector(".js-clock"), 
     clockTitle = document.querySelector("h1");
 
-const date = new Date();
-
 function getTime() {
     // 현재 시, 분, 초값 얻기
     const date = new Date();
